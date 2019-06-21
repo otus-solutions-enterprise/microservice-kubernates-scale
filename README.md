@@ -30,7 +30,9 @@ $ chmod +x minikube && sudo mv minikube /usr/local/bin/
 
 ```
 
+## Arquitecture
 
+![Drag Racing](https://cdn-images-1.medium.com/max/800/1*KIVa4hUVZxg-8Ncabo8pdg.png)
 
-
+Fonte: https://medium.com/google-cloud/kubernetes-nodeport-vs-loadbalancer-vs-ingress-when-should-i-use-what-922f010849e0
 
