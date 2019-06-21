@@ -9,12 +9,12 @@ This project used OS Ubuntu 19.04
 $ sudo apt-get update && sudo apt-get install -y apt-transport-https curl
 ```
 
-# Virtual Box
+### Virtual Box
 ```
 $ sudo apt-get install -y virtualbox virtualbox-ext-pack
 ```
 
-# Kubernates
+### Kubernates
 ```
 $ sudo curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
 $ sudo touch /etc/apt/sources.list.d/kubernetes.list 
@@ -23,16 +23,32 @@ $ sudo apt-get update
 $ sudo apt-get install -y kubectl
 ```
 
-# Minikube
+### Minikube
 ```
 $ curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.28.2/minikube-linux-amd64
 $ chmod +x minikube && sudo mv minikube /usr/local/bin/
 
 ```
 
-## Arquitecture
+### Arquitecture
 
 ![Drag Racing](https://cdn-images-1.medium.com/max/800/1*KIVa4hUVZxg-8Ncabo8pdg.png)
 
 Fonte: https://medium.com/google-cloud/kubernetes-nodeport-vs-loadbalancer-vs-ingress-when-should-i-use-what-922f010849e0
 
+## Initial Configuration
+In case of use outside the minikube the swap must be switched off
+```
+$ sudo swapoff -a
+
+```
+Remove entry fstab
+```
+$ sudo vim /etc/fstab
+
+```
+Comment swap line.
+```
+#/swapfile    none      swap     sw      0    0
+
+```
